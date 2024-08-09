@@ -19,12 +19,14 @@
 </html> -->
 
 <!DOCTYPE html>
+{% load static %} 
 <html>
 <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>ChatGPT Text Display App</title>
 </head>
 <body>
-    <h1>Enter your text</h1>
+    <h1 class="h1">Enter your text</h1>
     <form method="post">
         {% csrf_token %}
         <textarea name="user_input" rows="4" cols="50"></textarea><br>

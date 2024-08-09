@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Text Display App</title>
+</head>
+<body>
+    <h1>Enter your text</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="user_input" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if user_input %}
+        <h2>You entered:</h2>
+        <p>{{ user_input }}</p>
+    {% endif %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Text Display App</title>
+</head>
+<body>
+    <h1>Enter your text</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="user_input" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if user_input %}
+        <h2>You entered:</h2>
+        <p>{{ user_input }}</p>
+    {% endif %}
+
+    {% if gpt_response %}
+        <h2>ChatGPT Response:</h2>
+        <p>{{ gpt_response }}</p>
+    {% endif %}
+</body>
+</html>

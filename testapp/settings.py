@@ -170,3 +170,12 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 SUPERUSER_NAME = env("SUPERUSER_NAME")
 SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
 SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
+
+# セッションをデータベースに保存する場合
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# セッションをファイルに保存する場合
+# SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+
+# セッションの有効期限を設定
+SESSION_COOKIE_AGE = 1209600  # 2週間

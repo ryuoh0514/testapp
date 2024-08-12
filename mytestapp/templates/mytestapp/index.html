@@ -24,13 +24,14 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="icon" type="image/png" href="{% static '/image/icon.png' %}">
+    <script src="{% static 'js/script.js' %}"></script>
     <title>ChatGPT Text Display App</title>
 </head>
 <body>
     <h1 class="h1">Enter your text</h1>
-    <form method="post">
+    <form method="POST" id="new-message">
         {% csrf_token %}
-        <textarea name="user_input" rows="4" cols="50"></textarea><br>
+        <textarea id="message_text" name="user_input" rows="4" cols="50"></textarea><br>
         <input type="submit" value="Submit">
     </form>
     

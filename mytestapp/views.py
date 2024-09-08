@@ -1,7 +1,7 @@
 import requests
 from django.shortcuts import render
 from django.conf import settings
-from .utils import extract_text_from_predefined_pdf
+# from .utils import extract_text_from_predefined_pdf
 from .forms import QueryForm
 from .note import reference
 

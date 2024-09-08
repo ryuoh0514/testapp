@@ -69,7 +69,7 @@ def index(request):
 
         # ChatGPTからの応答を取得
         # gpt_response = get_chatgpt_response(conversation)
-        gpt_response = get_chatgpt_response(combined_prompt)
+        gpt_response = get_chatgpt_response(user_input)
 
         # 応答を会話履歴に追加
         # conversation.append({"role": "assistant", "content": gpt_response})

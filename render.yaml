@@ -14,7 +14,7 @@ services:
     branch: main
     healthCheckPath: /
     buildCommand: "./build.sh"
-    startCommand: "gunicorn testapp.wsgi:application"
+    startCommand: "sleep 10 && gunicorn testapp.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:

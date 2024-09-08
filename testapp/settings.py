@@ -105,8 +105,8 @@ default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 #     }
 # }
 DATABASES = {
-    # "default":config("DATABASE_URL",default=default_dburl,cast=dburl),
-    'default': config(default=os.getenv('postgresql://django_user:vxwIkTmWFLNNbR1tcF6cAPry4ySCg5hf@dpg-cqqrspggph6c738etiq0-a/django_render_db_v36g'))
+    "default":config("DATABASE_URL",default=default_dburl,cast=dburl),
+    # 'default': config(default=os.getenv('postgresql://django_user:vxwIkTmWFLNNbR1tcF6cAPry4ySCg5hf@dpg-cqqrspggph6c738etiq0-a/django_render_db_v36g'))
 }
 
 

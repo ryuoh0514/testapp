@@ -22,9 +22,10 @@
 {% load static %} 
 <html>
 <head>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="icon" type="image/png" href="{% static '/image/icon.png' %}">
-    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'mytestapp/css/style.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'mytestapp/image/icon.png' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'mytestapp/js/script.js' %}"></script>
     <title>ChatGPT Text Display App</title>
 </head>
 <body>
@@ -32,12 +33,22 @@
     <form method="POST" id="new-message">
         {% csrf_token %}
         <textarea id="message_text" name="user_input" rows="4" cols="50"></textarea><br>
+        <div>
+            <label><input type="checkbox" name="check" class="check" value="check1">本科</label>
+            <label><input type="checkbox" name="check" class="check" value="check2">専攻科</label>
+        </div>
         <input type="submit" value="Submit">
     </form>
+    
     
     {% if user_input %}
         <h2>You entered:</h2>
         <p>{{ user_input }}</p>
+    {% endif %}
+
+    {% if selected_check %}
+        <h2>Selected Option:</h2>
+        <p>{{ selected_check }}</p>
     {% endif %}
 
     {% if gpt_response %}
